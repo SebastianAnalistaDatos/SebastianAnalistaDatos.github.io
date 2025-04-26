@@ -1,4 +1,4 @@
-### Analisis de datos
+# Analisis de datos
 
 ## Portafolio de Juan Sebastian Gutierrez López
 
@@ -10,10 +10,10 @@ Analista de datos en formación, con 6 meses de experiencia como consultor exter
 
 Puedes ver un resumen de mis habilidades técnicas y blandas relevantes para el análisis de datos en la siguiente sección.
 
-# [Habilidades](Habilidades/)
+### [Habilidades](Habilidades/)
 
 ## Contacto
 
 Espero que mi portafolio te haya dado una buena idea de mi trabajo. Si tienes alguna pregunta o te gustaría ponerte en contacto, puedes hacerlo a través del siguiente enlace.
 
-# [Contacto](Contacto/)
+### [Contacto](Contacto/)

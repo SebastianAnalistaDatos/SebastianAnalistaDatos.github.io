@@ -21,16 +21,16 @@ A continuación, presento dos de mis proyectos más relevantes, demostrando mis 
 
 Explora la totalidad de mi portafolio de proyectos haciendo clic aquí.
 
-[Ver todos mis proyectos](Proyectos/)
+**[Ver todos mis proyectos](Proyectos/)**
 
 ## Habilidades
 
 Puedes ver un resumen de mis habilidades técnicas y blandas relevantes para el análisis de datos en la siguiente sección.
 
-### [Habilidades y Herramientas](Habilidades/)
+**[Habilidades y Herramientas](Habilidades/)**
 
 ## Contacto
 
 Espero que mi portafolio te haya dado una buena idea de mi trabajo. Si tienes alguna pregunta o te gustaría ponerte en contacto, puedes hacerlo a través del siguiente enlace.
 
-### [Contacto e información](Contacto/)
+**[Contacto e información](Contacto/)**

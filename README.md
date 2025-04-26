@@ -1,6 +1,5 @@
-# Analisis de datos
-
-## Portafolio de Juan Sebastian Gutierrez López
+# Portafolio de Juan Sebastian Gutierrez López
+## "Transformando datos en valor"
 
 Portafolio profesional de Sebastian Gutierrez – proyectos de análisis de datos con SQL, Power BI, Excel avanzado y visualización.
 

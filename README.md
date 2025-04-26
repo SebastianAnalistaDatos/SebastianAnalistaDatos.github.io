@@ -1,3 +1,3 @@
-# SebastianAnalistaDatos.github.io
+# Portafolio de Sebastian Gutierrez
 Portafolio profesional de Sebastian Gutierrez – proyectos de análisis de datos con SQL, Power BI, Excel avanzado y visualización.
 [Contacto](contacto/)

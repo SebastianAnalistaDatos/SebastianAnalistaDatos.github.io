@@ -199,6 +199,42 @@ section:first-of-type::after {
 .boton-descargar:hover {
     background-color: #c0392b; /* Color de fondo más oscuro al pasar el ratón */
 }
+        #sobre-mi {
+    margin: 60px 0;
+    position: relative; /* Para el posicionamiento de las líneas */
+    opacity: 0; /* Inicialmente la sección estará invisible */
+    transition: opacity 1s ease-in-out; /* Transición suave para la opacidad */
+}
+
+/* Mantén los estilos existentes para las líneas */
+#sobre-mi::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background-color: #E74C3C;
+}
+
+#sobre-mi::after {
+    content: '';
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Asegúrate de que la regla para la primera sección no oculte la animación si es la "Sobre mí" */
+section:first-of-type::before,
+section:first-of-type::after {
+    display: none;
+}
     </style>
 </head>
 <body>
@@ -223,6 +259,14 @@ section:first-of-type::after {
     <a href="assets/Hoja de vida - Sebastian Gutierrez.pdf" download class="boton-descargar">
     Descargar mi CV
 </a>
+        <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sobreMiSection = document.getElementById('sobre-mi');
+        if (sobreMiSection) {
+            sobreMiSection.style.opacity = 1; // Hace visible la sección después de cargar la página
+        }
+    });
+</script>
 </section>
 
     <section id="proyectos">

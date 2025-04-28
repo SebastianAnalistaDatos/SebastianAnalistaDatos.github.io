@@ -9,13 +9,17 @@
         #sobre-mi p {
     text-align: justify;
 }
-        body {
-            background-color: #121212;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+body {
+    background-color: #121212; /* Mantenemos el color de fondo oscuro */
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: radial-gradient(circle, rgba(231, 76, 60, 0.04) 1px, transparent 1px), /* Rojo muy tenue */
+                      radial-gradient(circle, rgba(231, 76, 60, 0.07) 1px, transparent 1px); /* Rojo un poco más visible */
+    background-size: 30px 30px; /* Tamaño de los círculos */
+    background-position: 0 0, 15px 15px; /* Posición de los círculos para crear un patrón */
+}
         header {
             background-color: #1f1f1f;
             padding: 20px;

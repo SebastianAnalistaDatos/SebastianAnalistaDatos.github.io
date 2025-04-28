@@ -136,16 +136,41 @@
     margin-bottom: 10px;
 }
    section {
-    margin: 50px 0;
-    border-top: 2px solid #E74C3C;
-    padding-top: 50px;
+    margin: 60px 0;
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: -30px; /* Ajusta la posición vertical */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%; /* Ancho de la línea */
+    height: 1px;
+    background-color: #333;
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    top: -35px; /* Ajusta la posición vertical del círculo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #E74C3C;
+    border-radius: 50%; /* Para hacerlo un círculo */
 }
 
 section:first-of-type {
-    border-top: none;
-    padding-top: 40px;
-    margin-top: 0;
-} 
+    margin-top: 50px; /* Ajusta el margen para el primer elemento */
+}
+
+section:first-of-type::before,
+section:first-of-type::after {
+    display: none; /* No mostrar separador antes de la primera sección */
+}
     </style>
 </head>
 <body>

@@ -45,6 +45,32 @@
             color: #e74c3c; /* Cambia el color del texto a un rojo mas suave */
             text-decoration: underline; /* Agrega una línea debajo del texto */
         }
+        .habilidad {
+    display: flex; /* Para alinear el nombre y la barra horizontalmente */
+    align-items: center; /* Para centrar verticalmente el nombre y la barra */
+    margin-bottom: 15px; /* Espacio entre cada habilidad */
+}
+
+.habilidad span {
+    width: 200px; /* Ancho fijo para el nombre de la habilidad, ajústalo si es necesario */
+    margin-right: 20px; /* Espacio entre el nombre y la barra */
+    text-align: left;
+}
+
+.barra-progreso {
+    background-color: #333; /* Color de fondo de la barra */
+    height: 20px; /* Altura de la barra */
+    width: 100%; /* La barra ocupa el espacio restante */
+    border-radius: 5px; /* Bordes redondeados opcionales */
+    overflow: hidden; /* Para que el progreso no se salga de los bordes */
+}
+
+.progreso {
+    background-color: #5cb85c; /* Color de la barra de progreso (verde, puedes cambiarlo) */
+    height: 100%; /* El progreso ocupa toda la altura de la barra */
+    border-radius: 5px; /* Bordes redondeados opcionales (debe ser igual al de la barra de progreso) */
+    width: 0%; /* Inicialmente la barra está vacía, se llenará con el estilo en línea */
+}
     </style>
 </head>
 <body>
@@ -75,24 +101,55 @@
 [Nombre del Proyecto 2]
 [Breve descripción del Proyecto 2] [Enlace al detalle del Proyecto 2] [Imagen del Proyecto 2 (opcional)].</p>
     </section>
-
-    <section id="habilidades">
-        <h2>Habilidades</h2>
-        <p>Habilidades
-Herramientas de Análisis y Visualización:
-Power BI: Creación de dashboards interactivos, visualizaciones personalizadas, modelado de datos y lenguaje DAX.
-Excel (Avanzado): Análisis de datos complejo, fórmulas avanzadas, Power Query, gráficos dinámicos y tablas dinámicas.
-Bases de Datos y Lenguaje de Consulta:
-SQL (MySQL): Diseño y gestión de bases de datos MySQL, consultas complejas, manipulación y análisis de datos a través de SQL.
-Habilidades Complementarias:
-Pensamiento Analítico
-Interpretación de Datos
-Comunicación de Resultados
-Resolución de Problemas
-Aprendiendo Actualmente:
-Visual Basic
-Python Pandas</p>
-    </section>
+    
+<section id="habilidades">
+    <h2>Habilidades</h2>
+    <div class="habilidad">
+        <span>Power BI</span>
+        <div class="barra-progreso">
+            <div class="progreso" style="width: 80%;"></div> </div>
+    </div>
+    <div class="habilidad">
+        <span>Excel (Avanzado)</span>
+        <div class="barra-progreso">
+            <div class="progreso" style="width: 90%;"></div> </div>
+    </div>
+    <div class="habilidad">
+        <span>SQL (MySQL)</span>
+        <div class="barra-progreso">
+            <div class="progreso" style="width: 70%;"></div> </div>
+    </div>
+    <div class="habilidad">
+        <span>Visual Basic (Aprendiendo)</span>
+        <div class="barra-progreso">
+            <div class="progreso" style="width: 30%;"></div> </div>
+    </div>
+    <div class="habilidad">
+        <span>Python Pandas (Aprendiendo)</span>
+        <div class="barra-progreso">
+            <div class="progreso" style="width: 20%;"></div> </div>
+    </div>
+    <div class="habilidad">
+        <span>Pensamiento Analítico</span>
+        <div class="barra-progreso">
+            <div class="progreso" style="width: 95%;"></div> </div>
+    </div>
+    <div class="habilidad">
+        <span>Interpretación de Datos</span>
+        <div class="barra-progreso">
+            <div class="progreso" style="width: 85%;"></div> </div>
+    </div>
+    <div class="habilidad">
+        <span>Comunicación de Resultados</span>
+        <div class="barra-progreso">
+            <div class="progreso" style="width: 80%;"></div> </div>
+    </div>
+    <div class="habilidad">
+        <span>Resolución de Problemas</span>
+        <div class="barra-progreso">
+            <div class="progreso" style="width: 85%;"></div> </div>
+    </div>
+</section>
 
     <section id="contacto">
         <h2>Contacto</h2>

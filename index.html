@@ -84,6 +84,52 @@
     margin-right: 10px; /* Espacio entre el icono y el texto */
     vertical-align: middle; /* Alinea verticalmente el icono con el texto */
 }
+        .contenedor-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.tarjeta-proyecto {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta-proyecto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-proyecto h3 {
+    color: #ddd;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.tarjeta-proyecto p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.tarjeta-proyecto a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.tarjeta-proyecto a:hover {
+    color: #f0f0f0;
+}
     </style>
 </head>
 <body>
@@ -105,15 +151,22 @@
     </section>
 
     <section id="proyectos">
-        <h2>Proyectos</h2>
-        <p>A continuación, presento dos de mis proyectos más relevantes, demostrando mis habilidades en el análisis y la visualización de datos.
-
-[Nombre del Proyecto 1]
-[Breve descripción del Proyecto 1] [Enlace al detalle del Proyecto 1] [Imagen del Proyecto 1 (opcional)]
-
-[Nombre del Proyecto 2]
-[Breve descripción del Proyecto 2] [Enlace al detalle del Proyecto 2] [Imagen del Proyecto 2 (opcional)].</p>
-    </section>
+    <h2>Proyectos</h2>
+    <div class="contenedor-proyectos">
+        <div class="tarjeta-proyecto">
+            <img src="img/proyecto1-miniatura.png" alt="Miniatura del Proyecto 1">
+            <h3>[Nombre del Proyecto 1]</h3>
+            <p>[Breve descripción del Proyecto 1]</p>
+            <a href="[Enlace al detalle del Proyecto 1]" target="_blank">Ver detalles</a>
+        </div>
+        <div class="tarjeta-proyecto">
+            <img src="img/proyecto2-miniatura.png" alt="Miniatura del Proyecto 2">
+            <h3>[Nombre del Proyecto 2]</h3>
+            <p>[Breve descripción del Proyecto 2]</p>
+            <a href="[Enlace al detalle del Proyecto 2]" target="_blank">Ver detalles</a>
+        </div>
+    </div>
+</section>
     
 <section id="habilidades">
     <h2>Habilidades</h2>

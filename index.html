@@ -239,6 +239,33 @@ section:first-of-type::before,
 section:first-of-type::after {
     display: none;
 }
+        #contacto {
+    margin: 60px 0; /* Asegura que tenga el mismo margen que otras secciones */
+    position: relative; /* Necesario para posicionar los pseudo-elementos */
+}
+
+#contacto::before {
+    content: '';
+    position: absolute;
+    top: -30px; /* Ajusta la posición vertical */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%; /* Ancho de la línea */
+    height: 1px;
+    background-color: #E74C3C;
+}
+
+#contacto::after {
+    content: '';
+    position: absolute;
+    top: -35px; /* Ajusta la posición vertical del círculo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%; /* Para hacerlo un círculo */
+}
     </style>
 </head>
 <body>

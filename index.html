@@ -183,40 +183,45 @@ section:first-of-type::after {
     color: #E74C3C;
     font-weight: bold; /* Opcional: para que el texto también sea en negrita */
 }
-        #certificados {
+#certificados {
     text-align: center;
-    overflow: hidden; /* Importante para ocultar los certificados fuera de la vista */
     padding: 20px;
+}
+
+.carrusel-navegacion {
+    position: relative; /* Para posicionar las flechas absolutamente dentro */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el carrusel */
 }
 
 .carrusel-contenedor {
-    display: flex; /* Coloca los slides uno al lado del otro */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-    scroll-snap-type: x mandatory; /* Activa el desplazamiento por "puntos" horizontalmente */
-    overflow-x: auto; /* Permite el desplazamiento horizontal si el contenido excede el ancho */
-    -webkit-overflow-scrolling: touch; /* Para un desplazamiento suave en iOS */
+    display: flex;
+    overflow-x: hidden; /* Oculta la barra de desplazamiento */
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
 .carrusel-slide {
-    flex: 0 0 100%; /* Evita que los slides se encojan o crezcan, y cada uno ocupa el 100% del ancho del contenedor */
+    flex: 0 0 100%;
     width: 100%;
-    scroll-snap-align: start; /* Asegura que cada slide se alinee al inicio del contenedor al desplazarse */
+    scroll-snap-align: start;
     padding: 20px;
-    box-sizing: border-box; /* Incluye el padding en el ancho */
+    box-sizing: border-box;
     text-align: center;
     background-color: #1f1f1f;
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    margin-right: 10px; /* Espacio entre los slides */
+    margin-right: 10px;
 }
 
-/* Oculta el último margen */
 .carrusel-slide:last-child {
     margin-right: 0;
 }
 
 .carrusel-slide img {
-    max-width: 80%; /* Ajusta el tamaño de la imagen dentro del slide */
+    max-width: 80%;
     height: auto;
     border-radius: 4px;
     margin-bottom: 10px;
@@ -233,6 +238,31 @@ section:first-of-type::after {
     color: #ccc;
     font-size: 0.9em;
     margin-bottom: 0;
+}
+
+.flecha-izquierda, .flecha-derecha {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Asegura que las flechas estén por encima del carrusel */
+}
+
+.flecha-izquierda {
+    left: 10px;
+}
+
+.flecha-derecha {
+    right: 10px;
+}
+
+/* Estilos para los iconos de flecha (si estás usando Font Awesome) */
+.flecha-izquierda i, .flecha-derecha i {
+    font-size: 2em;
 }
     </style>
 </head>
@@ -320,29 +350,33 @@ section:first-of-type::after {
     </div>
     <section id="certificados">
     <h2>Certificados Obtenidos</h2>
-    <div class="carrusel-contenedor">
-        <div class="carrusel-slide">
-            <img src="img/certificado-1.jpg" alt="Certificado 1">
-            <h3>Certificado 1</h3>
-            <p>Institución 1</p>
+    <div class="carrusel-navegacion">
+        <button class="flecha-izquierda"><i class="fas fa-chevron-left"></i></button>
+        <div class="carrusel-contenedor">
+            <div class="carrusel-slide">
+                <img src="img/certificado-1.jpg" alt="Certificado 1">
+                <h3>Certificado 1</h3>
+                <p>Institución 1</p>
+            </div>
+            <div class="carrusel-slide">
+                <img src="img/certificado-2.jpg" alt="Certificado 2">
+                <h3>Certificado 2</h3>
+                <p>Institución 2</p>
+            </div>
+            <div class="carrusel-slide">
+                <img src="img/certificado-3.jpg" alt="Certificado 3">
+                <h3>Certificado 3</h3>
+                <p>Institución 3</p>
+            </div>
+            <div class="carrusel-slide">
+                <img src="img/certificado-4.jpg" alt="Certificado 4">
+                <h3>Certificado 4</h3>
+                <p>Institución 4</p>
+            </div>
         </div>
-        <div class="carrusel-slide">
-            <img src="img/certificado-2.jpg" alt="Certificado 2">
-            <h3>Certificado 2</h3>
-            <p>Institución 2</p>
-        </div>
-        <div class="carrusel-slide">
-            <img src="img/certificado-3.jpg" alt="Certificado 3">
-            <h3>Certificado 3</h3>
-            <p>Institución 3</p>
-        </div>
-        <div class="carrusel-slide">
-            <img src="img/certificado-4.jpg" alt="Certificado 4">
-            <h3>Certificado 4</h3>
-            <p>Institución 4</p>
-        </div>
+        <button class="flecha-derecha"><i class="fas fa-chevron-right"></i></button>
     </div>
-</section>
+        
 </section>
 
     <section id="contacto">

@@ -190,46 +190,6 @@ section::after {
 .boton-descargar:hover {
     background-color: #c0392b; /* Color de fondo más oscuro al pasar el ratón */
 }
-        #sobre-mi {
-    margin: 60px 0;
-    position: relative; /* Para el posicionamiento de las líneas */
-    opacity: 0; /* Inicialmente la sección estará invisible */
-    transition: opacity 1s ease-in-out; /* Transición suave para la opacidad */
-    background-image: radial-gradient(circle, rgba(231, 76, 60, 0.05) 1px, transparent 1px), /* Rojo muy tenue */
-                      radial-gradient(circle, rgba(231, 76, 60, 0.08) 1px, transparent 1px); /* Rojo un poco más visible */
-    background-size: 30px 30px;
-    background-position: 0 0, 15px 15px;
-}
-
-/* Mantén los estilos existentes para las líneas */
-#sobre-mi::before {
-    content: '';
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 1px;
-    background-color: #E74C3C;
-}
-
-#sobre-mi::after {
-    content: '';
-    position: absolute;
-    top: -35px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    background-color: white;
-    border-radius: 50%;
-}
-
-/* Asegúrate de que la regla para la primera sección no oculte la animación si es la "Sobre mí" */
-section:first-of-type::before,
-section:first-of-type::after {
-    display: none;
-}
         #contacto {
     margin: 60px 0; /* Asegura que tenga el mismo margen que otras secciones */
     position: relative; /* Necesario para posicionar los pseudo-elementos */

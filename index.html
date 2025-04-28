@@ -261,8 +261,8 @@ section:first-of-type::after {
 }
 
 /* Estilos para los iconos de flecha (si estás usando Font Awesome) */
-.flecha-izquierda i, .flecha-derecha i {
-    font-size: 2em;
+.flecha-izquierda img, .flecha-derecha img {
+    height: 30px;;
 }
     </style>
 </head>
@@ -348,35 +348,62 @@ section:first-of-type::after {
         <div class="barra-progreso">
             <div class="progreso" style="width: 20%;"></div> </div>
     </div>
-    <section id="certificados">
+<section id="certificados">
     <h2>Certificados Obtenidos</h2>
     <div class="carrusel-navegacion">
-        <button class="flecha-izquierda"><i class="fas fa-chevron-left"></i></button>
+        <button class="flecha-izquierda"><img src="img/flecha izq.png" alt="Anterior"></button>
         <div class="carrusel-contenedor">
             <div class="carrusel-slide">
-                <img src="img/certificado-1.jpg" alt="Certificado 1">
+                <img src="img/certificado-1.png" alt="Certificado 1">
                 <h3>Certificado 1</h3>
                 <p>Institución 1</p>
             </div>
             <div class="carrusel-slide">
-                <img src="img/certificado-2.jpg" alt="Certificado 2">
+                <img src="img/certificado-2.png" alt="Certificado 2">
                 <h3>Certificado 2</h3>
                 <p>Institución 2</p>
             </div>
             <div class="carrusel-slide">
-                <img src="img/certificado-3.jpg" alt="Certificado 3">
+                <img src="img/certificado-3.png" alt="Certificado 3">
                 <h3>Certificado 3</h3>
                 <p>Institución 3</p>
             </div>
             <div class="carrusel-slide">
-                <img src="img/certificado-4.jpg" alt="Certificado 4">
+                <img src="img/certificado-4.png" alt="Certificado 4">
                 <h3>Certificado 4</h3>
                 <p>Institución 4</p>
             </div>
         </div>
-        <button class="flecha-derecha"><i class="fas fa-chevron-right"></i></button>
+        <button class="flecha-derecha"><img src="img/flecha der.png" alt="Siguiente"></button>
     </div>
-        
+<script>
+    const carruselContenedor = document.querySelector('.carrusel-contenedor');
+    const flechaIzquierda = document.querySelector('.flecha-izquierda');
+    const flechaDerecha = document.querySelector('.flecha-derecha');
+    const slides = document.querySelectorAll('.carrusel-slide');
+    let indiceSlideActual = 0;
+
+    function mostrarSlide(indice) {
+        const translateX = -indice * 100 + '%';
+        carruselContenedor.style.transform = 'translateX(' + translateX + ')';
+    }
+
+    function siguienteSlide() {
+        indiceSlideActual = (indiceSlideActual + 1) % slides.length;
+        mostrarSlide(indiceSlideActual);
+    }
+
+    function anteriorSlide() {
+        indiceSlideActual = (indiceSlideActual - 1 + slides.length) % slides.length;
+        mostrarSlide(indiceSlideActual);
+    }
+
+    flechaDerecha.addEventListener('click', siguienteSlide);
+    flechaIzquierda.addEventListener('click', anteriorSlide);
+
+    mostrarSlide(indiceSlideActual);
+</script>
+    
 </section>
 
     <section id="contacto">

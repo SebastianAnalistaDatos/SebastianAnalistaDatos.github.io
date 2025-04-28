@@ -204,6 +204,10 @@ section:first-of-type::after {
     position: relative; /* Para el posicionamiento de las líneas */
     opacity: 0; /* Inicialmente la sección estará invisible */
     transition: opacity 1s ease-in-out; /* Transición suave para la opacidad */
+    background-image: radial-gradient(circle, rgba(231, 76, 60, 0.05) 1px, transparent 1px), /* Rojo muy tenue */
+                      radial-gradient(circle, rgba(231, 76, 60, 0.08) 1px, transparent 1px); /* Rojo un poco más visible */
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
 }
 
 /* Mantén los estilos existentes para las líneas */
@@ -234,13 +238,6 @@ section:first-of-type::after {
 section:first-of-type::before,
 section:first-of-type::after {
     display: none;
-}
-        #sobre-mi {
-    /* ... otros estilos ... */
-    background-image: radial-gradient(circle, rgba(231, 76, 60, 0.05) 1px, transparent 1px), /* Rojo muy tenue */
-                      radial-gradient(circle, rgba(231, 76, 60, 0.08) 1px, transparent 1px); /* Rojo un poco más visible */
-    background-size: 30px 30px;
-    background-position: 0 0, 15px 15px;
 }
     </style>
 </head>

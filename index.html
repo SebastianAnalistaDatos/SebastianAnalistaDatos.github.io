@@ -99,6 +99,7 @@
     text-align: center;
     width: 300px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Agregamos la transición */
 }
 
 .tarjeta-proyecto img {
@@ -129,6 +130,10 @@
 
 .tarjeta-proyecto a:hover {
     color: #f0f0f0;
+}
+        .tarjeta-proyecto:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+    transform: translateY(-5px); /* Elevación ligera */
 }
         .herramientas-utilizadas {
     font-size: 12px;
